@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor div, span{
+            border: 1px solid blue;
+            width: 100px;
+            height: 100px;
+        }
+        /* seleccionar C2 y ponerla en relativa*/
+        .contenedor div:nth-child(2){
+            position: relative;
+            left:100px;
+        }
+
+        .contenedor span:nth-of-type(3){
+            position: relative;
+            background: red;
+            color: white;
+            top: 10px
+        }
+    </style>
+</head>
+<body>
+    <h1>Posicionamiento RELATIVO</h1>
+    <div class="contenedor">
+        <div>C1</div>
+        <div>C2</div>
+        <div>C3</div>
+        <span>span 1</span>
+        <span>span 2</span>
+        <span>span 3</span>
+
+    </div>
+</body>
+</html>

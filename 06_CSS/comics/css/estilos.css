@@ -1,0 +1,71 @@
+/*{border: 1px solid #ff0000}*/
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+}
+/** LA LIBRERIA CRLITOS ****/
+
+/*Color background*/
+
+.bg-primario{background: #fff;}
+.bg-secundario{background: #ff0000;}
+/*color -text*/
+.t-primario{ color:#0000ff;}
+.t-secundario{ color: #00ff00}
+/* propiedaades de texto*/
+.tx-center{text-align: center;}
+.d-line-block{display: inline-block;}
+/************/
+
+/* ***** HEADER ******/
+header{position:fixed; top:0px; width: 100%;}
+.encabezado{ width: 100%; height: 100px;}
+.encabezado img{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+#login{float:right; margin-top: 10px; margin-right: 10px;}
+/* **** barra navegacion ****/
+nav{
+    background: #ff0000;
+    text-align: center; 
+    
+}
+nav ul{ list-style-type:none; margin: 0px;}
+nav ul li{
+    color:#ff0000;
+    display:inline-block;
+    width: 10%;
+    padding: 5px 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ****** CARTA ********/
+.card{
+    border: 1px solid #AAAAAA;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+    margin-right: 10px;
+}
+.imagen-superheroe{width: 250px; height: 250px;}
+.imagen-superheroe img{
+    width:auto;
+    height: 100%;
+    border-radius: 50%;
+}
+.titulo_item{
+    font-family: Tahoma;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#grilla{text-align: center;margin-top:120px}
+#contactos{height: 50px; background: #ff0000; color:#fff}
+.logo-rss{width: 32px; height: 32px; border: 1px solid #fff; float:right; margin-right: 15px;}
+
+.f-rigth{float:right}
