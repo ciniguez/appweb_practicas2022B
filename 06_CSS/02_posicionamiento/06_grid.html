@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS</title>
+    <style>
+        #contenedor{
+            display: grid;
+            grid-template-columns: repeat(15, 20px);
+            grid-template-rows: 50px 50px 50px;
+            gap: 10px;
+
+        }
+        #contenedor > div{
+            border: 1px solid rgba(255, 0, 0);
+            background: blue;
+            color: white;
+            font-size: 26px;
+        }
+        /** estilos para pagina layout ******/
+        .mi-pagina{
+            border: 1px solid blue;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 25px 15px auto 150px;
+            gap: 2px;
+        }
+        #cuerpo{ 
+            display: grid; 
+            grid-template-columns: 20% 80%;
+        }
+        .mi-pagina > div{background: lightblue;}
+        #main > div{
+            border: 1px solid red;
+            height: 100px;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: auto;
+            background: white;
+            gap: 10px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="contenedor">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <div class="mi-pagina">
+        <div>Banner</div>
+        <div>Navegacion</div>
+        <div id="cuerpo">
+            <div>Lateral</div>
+            <div id="main">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+        </div>
+        <div>Footer</div>
+    </div>
+    
+</body>
+</html>

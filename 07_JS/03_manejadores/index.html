@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejadores de eventos</title>
+</head>
+<body>
+    <h1>FORMA 1: Manejador en Línea</h1>
+    <p onclick="alert('onClick: Manejador en línea')">Haga click!</p>
+
+    <h1>FORMA 2: Manejador como propiedades (JS)</h1>
+    <p>Hacer click aquí (Forma 2)</p>
+
+    <h1>FORMA 3: Manejador en Línea</h1>
+    <p>Hacer click aquí (Forma 3)</p>
+
+    <script>
+        function mostrarMensaje(){
+            alert('onClick: Manejador como propiedad');
+        }
+        function mostrarMensajeElementoHTML( elementoHTML ){
+            alert(elementoHTML.textContent);
+        }
+
+        // 1.- Manejador como Propiedad de un elemneto HTML
+        //var elemento = document.getElementsByTagName('p')[1];
+        //elemento.onclick = mostrarMensaje;
+
+        // 2.- Manejador con AddEventListener
+        var elemento2 = document.getElementsByTagName('p')[2];
+        elemento2.addEventListener('click', mostrarMensaje,false);
+
+        // Formas Pro
+        //document.getElementsByTagName('p')[1].onclick = mostrarMensaje;
+        document.getElementsByTagName('p')[2].addEventListener('click', mostrarMensaje,false);
+
+        // *********** uso de funcioes anonimas par evitar recursividad************
+        document.getElementsByTagName('p')[1].addEventListener('click',  function(){
+            mostrarMensajeElementoHTML(this);
+        });
+
+       
+
+
+    </script>
+</body>
+</html>

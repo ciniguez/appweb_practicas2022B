@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores con JS</title>
+
+</head>
+<body>
+    <h1>Selectores JS</h1>
+    <p id="mielemento">Párrafo con id="mielemento"</p>
+    <span>Este es un SPAN</span>
+    <p class="clase">Párrafo con class="clase"</p>
+    <div class="clase"> DIV con class="clase"</div>
+
+    <h2> DIV con tres párrafos</h2>
+    <div id="principal">
+        <p>Parrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+    </div>
+
+
+    <script>
+        // ******* SELETORES ***** //
+        // Obtener por su Id
+        var elemento = document.getElementById('mielemento');
+        console.log(elemento.textContent);
+        console.log("*****************************************");
+        // Obtener por nombre de etiqueta (TAG)
+        var elementos =  document.getElementsByTagName('p');
+        for(var i = 0 ; i< elementos.length; i++){
+            console.log( "[" + i + "] " + elementos[i].textContent);
+        }
+        console.log("*************************************");
+
+        //Obtener por nombre de clase
+        var elementosXClase = document.getElementsByClassName('clase');
+        for(var i= 0; i< elementosXClase.length; i++){
+            console.log("[" + i + "] " + elementosXClase[i].textContent);
+        }
+
+        console.log("*************************************");
+
+        // Uso de querySelector (Siempre retorna 1 elemento, el primero de un conjunto)
+        var elementoP =  document.querySelector("#principal p");
+        console.log("querySelector('#principal p') :"+  elementoP.textContent);
+
+        console.log("*************************************");
+
+        //Uso de querySelectorAll (Siempre retorna un array de elementos que cumplen con la condición)
+
+        var elementosP = document.querySelectorAll("#principal p");
+        for(var i=0; i< elementosP.length ; i++){
+            console.log("[" + i + "] " + elementosP[i].textContent);
+        }
+    </script>
+</body>
+</html>
